@@ -20,3 +20,47 @@ document.body.onload = function() {
     }
   }, 1000)
 }
+
+var Menu = {
+  
+  el: {
+    ham: $('.back'),
+    link: $('.mobile__link'),
+    menuTop: $('.menu-top'),
+    menuMiddle: $('.menu-middle'),
+    menuBottom: $('.menu-bottom'),
+    check: $('.mobile')
+  },
+  
+  init: function() {
+    Menu.bindUIactions();
+  },
+  
+  bindUIactions: function() {
+    Menu.el.link
+        .on(
+          'click',
+        function(event) {
+        Menu.activateMenu(event);
+        event.preventDefault();
+      }
+    ),
+    Menu.el.ham
+        .on(
+          'click',
+        function(event) {
+        Menu.activateMenu(event);
+        event.preventDefault();
+      }
+    )
+  },
+  
+  activateMenu: function() {
+    Menu.el.check.toggleClass('mobile-active');
+    Menu.el.menuTop.toggleClass('menu-top-click');
+    Menu.el.menuMiddle.toggleClass('menu-middle-click');
+    Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
+  }
+};
+
+Menu.init();
