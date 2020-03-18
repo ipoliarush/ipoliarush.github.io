@@ -439,32 +439,9 @@
     </div>
   </footer>
   <!-- JS Scripts -->
-  <script src="js/main.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/parallaxie.js"></script>
-  <script>
-    $('.parallaxie').parallaxie({
-      speed: 0.4,
-      size: "auto",
-    });
-    
-    var wow = new WOW(
-      {
-        offset: 100,
-      }
-    );
-    wow.init();
-    
-    document.body.onload = function() {
-      setTimeout(function() {
-        var preloader = document.getElementById('loader');
-        if( !preloader.classList.contains('done') )
-        {
-          preloader.classList.add('done');
-        }
-      }, 1000)
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
