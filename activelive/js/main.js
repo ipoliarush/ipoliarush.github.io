@@ -56,6 +56,7 @@ var Menu = {
   },
   
   activateMenu: function() {
+    Menu.el.ham.toggleClass('back-fixed');
     Menu.el.check.toggleClass('mobile-active');
     Menu.el.menuTop.toggleClass('menu-top-click');
     Menu.el.menuMiddle.toggleClass('menu-middle-click');
