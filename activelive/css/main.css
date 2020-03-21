@@ -528,7 +528,7 @@ input, button {
 }
 
 /* ----- Preloader ----- */
-/*
+
 .loader {
   align-items: center;
   display: flex;
@@ -606,7 +606,6 @@ input, button {
     opacity: 0;
   }
 }
-*/
 
 /* ----- Media Queries ----- */
 
