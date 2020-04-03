@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Наш Сервис</title>
+  <title>TechnoSerwis</title>
   <meta name="description" content="#">
   <meta name="keywords" content="#">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,11 @@
   <meta property="og:image" content="#">
   <meta property="og:site_name" content="#">
   <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
   <!-- JS Scripts -->
   <script src="https://kit.fontawesome.com/88a0bb9969.js" crossorigin="anonymous"></script>
   <script src="js/TweenMax.min.js"></script>
@@ -28,39 +31,36 @@
     <div class="container">
       <div class="header">
         <nav class="nav d-flex align-items-center justify-content-between">
-          <a href="#" class="logo d-flex align-items-center">
-            <i class="fab fa-affiliatetheme"></i>
-            Н<span>аш</span>C<span>ервис</span>
+          <a href="index.html" class="logo d-flex">
+            <img class="logo__img" src="img/logo.svg" alt="TechnoSerwis">
+            <div class="logo__text d-flex flex-column text-center justify-content-center">
+              <span class="logo__title">TechnoSerwis</span>
+              <span class="logo__tagline">naprawa urządzeń gospodarstwa domowego</span>
+            </div>
           </a>
           <ul class="nav__list d-flex align-items-center">
             <li class="nav__item">
-              <a href="#" class="nav__link">
-                Главная
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">
+              <a href="#services" class="nav__link flowing-scroll">
                 Сервисы
               </a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">
+              <a href="#reviews" class="nav__link flowing-scroll">
                 Отзывы
               </a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">
+              <a href="#price" class="nav__link flowing-scroll">
                 Прайс
               </a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">
+              <a href="#contact" class="nav__link flowing-scroll">
                 Контакты
               </a>
             </li>
-            <div class="nav__line"></div>
           </ul>
-          <a href="#" class="nav__btn btn">
+          <a href="#" class="nav__btn-m btn-m">
             Заказать звонок
           </a>
         </nav>
@@ -72,7 +72,7 @@
             <p class="offer__subtitle">
               Просто позвоните или напишите нам, и мы предоставим вам ремонт максимально качественно и по привлекательной цене.
             </p>
-            <a href="#" class="offer__btn btn">
+            <a href="#" class="offer__btn-m btn-m">
               Сообщить о поломке
             </a>
           </div>
@@ -101,40 +101,48 @@
         </p>
         <ul class="services__list d-flex justify-content-between">
           <li class="services__item">
-            <img src="img/washer.svg" alt="" class="services__img">
-            <h4 class="services__caption">
-              Ремонт стиральных машин
-            </h4>
-            <p class="services__text">
-              Повседневная практика показывает, что постоянный количественный рост
-            </p>
+            <a href="#collapseOneScroll" data-click="One" class="services__link flowing-scroll">
+              <img src="img/washer.svg" alt="" class="services__img">
+              <h4 class="services__caption">
+                Ремонт стиральных машин
+              </h4>
+              <p class="services__text">
+                Повседневная практика показывает, что постоянный количественный рост
+              </p>
+            </a>
           </li>
           <li class="services__item">
-            <img src="img/refrigerator.svg" alt="" class="services__img">
-            <h4 class="services__caption">
-              Ремонт холодильников
-            </h4>
-            <p class="services__text">
-              Повседневная практика показывает, что постоянный количественный рост
-            </p>
+            <a href="#collapseTwoScroll" data-click="Two" class="services__link flowing-scroll">
+              <img src="img/refrigerator.svg" alt="" class="services__img">
+              <h4 class="services__caption">
+                Ремонт холодильников
+              </h4>
+              <p class="services__text">
+                Повседневная практика показывает, что постоянный количественный рост
+              </p>
+            </a>
           </li>
           <li class="services__item">
-            <img src="img/conditioning.svg" alt="" class="services__img">
-            <h4 class="services__caption">
-              Ремонт кондиционеров
-            </h4>
-            <p class="services__text">
-              Повседневная практика показывает, что постоянный количественный рост
-            </p>
+            <a href="#collapseThreeScroll" data-click="Three" class="services__link flowing-scroll">
+              <img src="img/conditioning.svg" alt="" class="services__img">
+              <h4 class="services__caption">
+                Ремонт кондиционеров
+              </h4>
+              <p class="services__text">
+                Повседневная практика показывает, что постоянный количественный рост
+              </p>
+            </a>
           </li>
           <li class="services__item">
-            <img src="img/oven.svg" alt="" class="services__img">
-            <h4 class="services__caption">
-              Ремонт духовок
-            </h4>
-            <p class="services__text">
-              Повседневная практика показывает, что постоянный количественный рост
-            </p>
+            <a href="#collapseFourScroll" data-click="Four" class="services__link flowing-scroll">
+              <img src="img/oven.svg" alt="" class="services__img">
+              <h4 class="services__caption">
+                Ремонт духовок
+              </h4>
+              <p class="services__text">
+                Повседневная практика показывает, что постоянный количественный рост
+              </p>
+            </a>
           </li>
         </ul>
       </div>
@@ -187,7 +195,7 @@
       </div>
     </div>
   </section>
-  <section class="price-section" id="reviews">
+  <section class="price-section" id="price">
     <div class="container">
       <div class="price">
         <h2 class="price__title">
@@ -196,92 +204,94 @@
         <p class="price__subtitle">
           Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности играет важную роль
         </p>
-        <div class="work">
+        <div class="work accordion" id="accordionExample">
           <div class="work__item d-flex">
-            <div class="work__head d-flex">
+            <div class="work__head d-flex collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" role="button" id="collapseOneScroll">
               <h4 class="work__title">
                 Ремонт стиральных машин
               </h4>
               <div class="arrow">
-                <div class="arrow-1 arrow-1-l"></div>
-                <div class="arrow-2 arrow-2-r"></div>
+                <div class="arrow-1"></div>
+                <div class="arrow-2"></div>
               </div>
             </div>
-            <div class="work__elem work__elem_yellow">
-              <p class="work__text">
-                Вызов мастера на дом и диагностика
-              </p>
-              <span class="work__price">
-                120 грн
-              </span>
-            </div>
-            <div class="work__elem">
-              <p class="work__text">
-                Устранение засора
-              </p>
-              <span class="work__price">
-                250-350 грн
-              </span>
-            </div>
-            <div class="work__elem work__elem_yellow">
-              <p class="work__text">
-                Устранение инородных предметов
-              </p>
-              <span class="work__price">
-                250-350 грн
-              </span>
-            </div>
-            <div class="work__elem">
-              <p class="work__text">
-                Замена шланга
-              </p>
-              <span class="work__price">
-                200 грн
-              </span>
-            </div>
-            <div class="work__elem work__elem_yellow">
-              <p class="work__text">
-                Замена сетевого фильтра (фильтр входит в стоимость)
-              </p>
-              <span class="work__price">
-                350-400 грн
-              </span>
-            </div>
-            <div class="work__elem">
-              <p class="work__text">
-                Замена клапана на подачу воды (клапан входит в стоимость)
-              </p>
-              <span class="work__price">
-                370-450 грн
-              </span>
-            </div>
-            <div class="work__elem work__elem_yellow">
-              <p class="work__text">
-                Замена температурного датчика
-              </p>
-              <span class="work__price">
-                от 250 грн
-              </span>
-            </div>
-            <div class="work__elem">
-              <p class="work__text">
-                Подключение стиральной машинки	
-              </p>
-              <span class="work__price">
-                от 180 грн
-              </span>
-            </div>
-            <div class="work__elem work__elem_yellow">
-              <p class="work__text">
-                В случае ремонта стиральной машины диагностика
-              </p>
-              <span class="work__price work__price_upper">
-                Бесплатно
-              </span>
+            <div class="work__wrap collapse" id="collapseOne" data-parent="#accordionExample">
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Вызов мастера на дом и диагностика
+                </p>
+                <span class="work__price">
+                  120 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Устранение засора
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Устранение инородных предметов
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена шланга
+                </p>
+                <span class="work__price">
+                  200 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена сетевого фильтра (фильтр входит в стоимость)
+                </p>
+                <span class="work__price">
+                  350-400 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена клапана на подачу воды (клапан входит в стоимость)
+                </p>
+                <span class="work__price">
+                  370-450 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена температурного датчика
+                </p>
+                <span class="work__price">
+                  от 250 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Подключение стиральной машинки	
+                </p>
+                <span class="work__price">
+                  от 180 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  В случае ремонта стиральной машины диагностика
+                </p>
+                <span class="work__price work__price_upper">
+                  Бесплатно
+                </span>
+              </div>
             </div>
           </div>
           <div class="work__item d-flex">
-            <div class="work__head d-flex">
+            <div class="work__head d-flex collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button" id="collapseTwoScroll">
               <h4 class="work__title">
                 Ремонт холодильников
               </h4>
@@ -290,9 +300,83 @@
                 <div class="arrow-2"></div>
               </div>
             </div>
+            <div class="work__wrap collapse" id="collapseTwo" data-parent="#accordionExample">
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Вызов мастера на дом и диагностика
+                </p>
+                <span class="work__price">
+                  120 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Устранение засора
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Устранение инородных предметов
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена шланга
+                </p>
+                <span class="work__price">
+                  200 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена сетевого фильтра (фильтр входит в стоимость)
+                </p>
+                <span class="work__price">
+                  350-400 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена клапана на подачу воды (клапан входит в стоимость)
+                </p>
+                <span class="work__price">
+                  370-450 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена температурного датчика
+                </p>
+                <span class="work__price">
+                  от 250 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Подключение стиральной машинки	
+                </p>
+                <span class="work__price">
+                  от 180 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  В случае ремонта стиральной машины диагностика
+                </p>
+                <span class="work__price work__price_upper">
+                  Бесплатно
+                </span>
+              </div>
+            </div>
           </div>
           <div class="work__item d-flex">
-            <div class="work__head d-flex">
+            <div class="work__head d-flex collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button" id="collapseThreeScroll">
               <h4 class="work__title">
                 Ремонт кондиционеров
               </h4>
@@ -301,9 +385,83 @@
                 <div class="arrow-2"></div>
               </div>
             </div>
+            <div class="work__wrap collapse" id="collapseThree" data-parent="#accordionExample">
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Вызов мастера на дом и диагностика
+                </p>
+                <span class="work__price">
+                  120 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Устранение засора
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Устранение инородных предметов
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена шланга
+                </p>
+                <span class="work__price">
+                  200 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена сетевого фильтра (фильтр входит в стоимость)
+                </p>
+                <span class="work__price">
+                  350-400 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена клапана на подачу воды (клапан входит в стоимость)
+                </p>
+                <span class="work__price">
+                  370-450 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена температурного датчика
+                </p>
+                <span class="work__price">
+                  от 250 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Подключение стиральной машинки	
+                </p>
+                <span class="work__price">
+                  от 180 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  В случае ремонта стиральной машины диагностика
+                </p>
+                <span class="work__price work__price_upper">
+                  Бесплатно
+                </span>
+              </div>
+            </div>
           </div>
           <div class="work__item d-flex">
-            <div class="work__head d-flex">
+            <div class="work__head d-flex collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" role="button" id="collapseFourScroll">
               <h4 class="work__title">
                 Ремонт духовок
               </h4>
@@ -312,12 +470,86 @@
                 <div class="arrow-2"></div>
               </div>
             </div>
+            <div class="work__wrap collapse" id="collapseFour" data-parent="#accordionExample">
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Вызов мастера на дом и диагностика
+                </p>
+                <span class="work__price">
+                  120 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Устранение засора
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Устранение инородных предметов
+                </p>
+                <span class="work__price">
+                  250-350 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена шланга
+                </p>
+                <span class="work__price">
+                  200 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена сетевого фильтра (фильтр входит в стоимость)
+                </p>
+                <span class="work__price">
+                  350-400 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Замена клапана на подачу воды (клапан входит в стоимость)
+                </p>
+                <span class="work__price">
+                  370-450 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  Замена температурного датчика
+                </p>
+                <span class="work__price">
+                  от 250 грн
+                </span>
+              </div>
+              <div class="work__elem">
+                <p class="work__text">
+                  Подключение стиральной машинки	
+                </p>
+                <span class="work__price">
+                  от 180 грн
+                </span>
+              </div>
+              <div class="work__elem work__elem_yellow">
+                <p class="work__text">
+                  В случае ремонта стиральной машины диагностика
+                </p>
+                <span class="work__price work__price_upper">
+                  Бесплатно
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="contact-section" id="reviews">
+  <section class="contact-section" id="contact">
     <div class="container">
       <div class="contacts">
         <h2 class="contacts__title">
@@ -378,7 +610,7 @@
     </div>
     <div class="yellow__bg"></div>
   </section>
-  <footer class="footer-section" id="reviews">
+  <footer class="footer-section" id="footer">
     <div class="container">
       <div class="footer">
         <div class="footer__content d-flex justify-content-between align-items-center">
@@ -400,39 +632,36 @@
           </div>
         </div>
         <nav class="f-nav d-flex align-items-center justify-content-between">
-          <a href="#" class="f-logo d-flex align-items-center">
-            <i class="fab fa-affiliatetheme"></i>
-            Н<span>аш</span>C<span>ервис</span>
+          <a href="index.html" class="f-logo d-flex">
+            <img class="f-logo__img" src="img/logo.svg" alt="TechnoSerwis">
+            <div class="f-logo__text d-flex flex-column text-center justify-content-center">
+              <span class="f-logo__title">TechnoSerwis</span>
+              <span class="f-logo__tagline">naprawa urządzeń gospodarstwa domowego</span>
+            </div>
           </a>
           <ul class="f-nav__list d-flex align-items-center">
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link">
-                Главная
-              </a>
-            </li>
-            <li class="f-nav__item">
-              <a href="#" class="f-nav__link">
+              <a href="#services" class="f-nav__link flowing-scroll">
                 Сервисы
               </a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link">
+              <a href="#reviews" class="f-nav__link flowing-scroll">
                 Отзывы
               </a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link">
+              <a href="#price" class="f-nav__link flowing-scroll">
                 Прайс
               </a>
             </li>
             <li class="f-nav__item">
-              <a href="#" class="f-nav__link">
+              <a href="#contact" class="f-nav__link flowing-scroll">
                 Контакты
               </a>
             </li>
-            <div class="f-nav__line"></div>
           </ul>
-          <a href="#" class="f-nav__btn btn">
+          <a href="#" class="f-nav__btn-m btn-m">
             Заказать звонок
           </a>
         </nav>
@@ -440,6 +669,8 @@
     </div>
   </footer>
   <!-- JS Scripts -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/TweenMaxSettings.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
