@@ -112,7 +112,7 @@ textarea {
   margin: 0 auto;
 }
 
-.btn {
+.btn-m {
   display: block;
   height: 42px;
   text-transform: uppercase;
@@ -122,99 +122,6 @@ textarea {
   font-size: 14px;
   border-radius: 50px;
   letter-spacing: -0.03em;
-}
-
-.d-flex {
-  display: -webkit-flex !important;
-  display: -moz-flex !important;
-  display: -ms-flex !important;
-  display: -o-flex !important;
-  display: flex !important;
-}
-
-.flex-row {
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
-}
-
-.flex-column {
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
-}
-
-.flex-row-reverse {
-  -ms-flex-direction: row-reverse !important;
-  flex-direction: row-reverse !important;
-}
-
-.flex-column-reverse {
-  -ms-flex-direction: column-reverse !important;
-  flex-direction: column-reverse !important;
-}
-
-.flex-wrap {
-  -ms-flex-wrap: wrap !important;
-  flex-wrap: wrap !important;
-}
-
-.flex-nowrap {
-  -ms-flex-wrap: nowrap !important;
-  flex-wrap: nowrap !important;
-}
-
-.flex-wrap-reverse {
-  -ms-flex-wrap: wrap-reverse !important;
-  flex-wrap: wrap-reverse !important;
-}
-
-.justify-content-start {
-  -ms-flex-pack: start !important;
-  justify-content: flex-start !important;
-}
-
-.justify-content-end {
-  -ms-flex-pack: end !important;
-  justify-content: flex-end !important;
-}
-
-.justify-content-center {
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
-}
-
-.justify-content-between {
-  -ms-flex-pack: justify !important;
-  justify-content: space-between !important;
-}
-
-.justify-content-around {
-  -ms-flex-pack: distribute !important;
-  justify-content: space-around !important;
-}
-
-.align-items-start {
-  -ms-flex-align: start !important;
-  align-items: flex-start !important;
-}
-
-.align-items-end {
-  -ms-flex-align: end !important;
-  align-items: flex-end !important;
-}
-
-.align-items-center {
-  -ms-flex-align: center !important;
-  align-items: center !important;
-}
-
-.align-items-baseline {
-  -ms-flex-align: baseline !important;
-  align-items: baseline !important;
-}
-
-.align-items-stretch {
-  -ms-flex-align: stretch !important;
-  align-items: stretch !important;
 }
 
 /* ----- Pseudo Elements ----- */
@@ -285,25 +192,35 @@ textarea {
 }
 
 .logo {
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #FDB309;
-  font-size: 36px;
-  font-weight: 700;
   display: block;
-  align-items: center;
-  letter-spacing: 0.01em;
+  color: #101010;
+  position: relative;
 }
-
-.logo i {
-  font-size: 59px;
-  margin-right: 14px;
+.logo:hover {
+  color: #101010;
 }
-
-.logo span {
-  color: #606060;
+.logo__img {
+  max-width: 70px;
+}
+.logo__text {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+.logo__title {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.042em;
+  line-height: 32px;
+}
+.logo__tagline {
+  font-family: 'Exo 2', sans-serif;
+  width: 260px;
+  font-size: 13px;
   font-weight: 400;
+  letter-spacing: -0.03em;
 }
-
 .nav__list {
   position: relative;
   margin-left: auto;
@@ -328,18 +245,19 @@ textarea {
   color: #FDB309;
 }
 
-.nav__btn {
+.nav__btn-m {
   width: 182px;
   margin-left: 15px;
   background: #FDB309;
   color: #fff;
 }
 
-.nav__btn:hover {
+.nav__btn-m:hover {
   box-shadow: 0px 3px 15px rgba(253, 179, 9, 0.7);
+  color: #fff;
 }
 
-.nav__btn:active {
+.nav__btn-m:active {
   box-shadow: 0 3px 10px rgba(152, 106, 0, 0.5);
 }
 
@@ -368,18 +286,19 @@ textarea {
   margin-top: 20px;
 }
 
-.offer__btn {
+.offer__btn-m {
   margin-top: 50px;
   background: #FDB309;
   color: #fff;
   width: 215px;
 }
 
-.offer__btn:hover {
+.offer__btn-m:hover {
   box-shadow: 0px 3px 15px rgba(253, 179, 9, 0.7);
+  color: #fff;
 }
 
-.offer__btn:active {
+.offer__btn-m:active {
   box-shadow: 0 3px 10px rgba(152, 106, 0, 0.5);
 }
 
@@ -507,6 +426,7 @@ textarea {
 }
 
 .services__text {
+  color: #606060;
   font-size: 14px;
   line-height: 18px;
   margin-top: 25px;
@@ -602,6 +522,7 @@ textarea {
 
 .reviews__btn:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  color: #243748;
 }
 
 .reviews__btn:active {
@@ -647,6 +568,7 @@ textarea {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #FFEBC2;
 }
 
 .work__title {
@@ -663,26 +585,39 @@ textarea {
 .arrow-1,
 .arrow-2 {
   width: 100%;
-  transition: 0.55s;
   border-bottom: 4px solid #010427;
   border-radius: 50px;
   backface-visibility: hidden;
   position: absolute;
+  opacity: 1;
 }
 
-.arrow-2 {}
-
-.arrow-1-l {
+.arrow-1 {
   transform: rotate(40deg);
   width: 65%;
   left: -1px;
+  transition: 0.55s 0.3s;
 }
-
-.arrow-2-r {
-  transform: rotate(-40deg);
+.arrow-2 {
+  transform: rotate(-400deg);
   width: 65%;
   right: -1px;
+  transition: 0.55s 0.3s;
 }
+
+div[aria-expanded="false"] .arrow-1 {
+  width: 100%;
+  transform: rotate(0);
+  left: 0;
+  opacity: 0;
+}
+
+div[aria-expanded="false"] .arrow-2 {
+  width: 100%;
+  transform: rotate(0);
+  right: 0;
+}
+
 
 .work__elem {
   padding: 0 12px;
@@ -833,6 +768,7 @@ textarea {
 
 .form__btn:hover {
   box-shadow: 0 3px 15px rgba(253, 179, 9, 0.7);
+  color: #fff;
 }
 
 .form__btn:active {
@@ -891,23 +827,34 @@ textarea {
 }
 
 .f-logo {
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #fff;
-  font-size: 36px;
-  font-weight: 700;
   display: block;
-  align-items: center;
-  letter-spacing: 0.01em;
+  color: #fff;
+  position: relative;
 }
-
-.f-logo i {
-  font-size: 59px;
-  margin-right: 14px;
+.f-logo:hover {
+  color: #fff;
 }
-
-.f-logo span {
-  color: #606060;
+.f-logo__img {
+  max-width: 70px;
+}
+.f-logo__text {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+.f-logo__title {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.042em;
+  line-height: 32px;
+}
+.f-logo__tagline {
+  font-family: 'Exo 2', sans-serif;
+  width: 260px;
+  font-size: 13px;
   font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 .f-nav__list {
@@ -934,18 +881,19 @@ textarea {
   color: #606060;
 }
 
-.f-nav__btn {
+.f-nav__btn-m {
   width: 182px;
   margin-left: 15px;
   background: #fff;
   color: #FDB309;
 }
 
-.f-nav__btn:hover {
+.f-nav__btn-m:hover {
   box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.7);
+  color: #fdb309;
 }
 
-.f-nav__btn:active {
+.f-nav__btn-m:active {
   box-shadow: 0 3px 10px rgba(144, 144, 144, 0.5);
 }
 
