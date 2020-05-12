@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout School</title>
+  <meta name="description" content="#">
+  <meta name="keywords" content="#">
+  <!-- Favicon -->
+  <link rel="icon" href="#" type="image/x-icon">
+  <link rel="shortcut icon" href="#" type="image/x-icon"> 
+  <!-- OG Tags -->
+  <meta property="og:title" content="#">
+  <meta property="og:description" content="#">
+  <meta property="og:type" content="#">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="#">
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <!-- JS Scripts -->
+  <script src="https://kit.fontawesome.com/88a0bb9969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header-section" id="header">
+    <div class="header">
+      <div class="container d-flex j-content-between a-items-center">
+        <a href="#" class="logo d-flex">
+          <i class="logo__icon fas fa-plug"></i>
+          <div class="logo__content">
+            <p class="logo__text logo__text_big">Школа верстки</p>
+            <p class="logo__text logo__text_small">Ивана Поляруша</p>
+          </div>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list d-flex">
+            <li class="nav__item">
+              <a href="#progress" class="nav__link">
+                Знаете ли вы
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#plus" class="nav__link">
+                Зачем
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                Кому
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#reg" class="nav__link">
+                Регистрация
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="tel:+749556756412" class="telephone">
+          <i class="fas fa-phone"></i>
+          +7 (495) 567-564-12
+        </a>
+      </div>
+    </div>
+    <div class="screen">
+      <div class="container d-flex j-content-around a-items-center">
+        <div class="offer d-flex">
+          <div class="offer__desc d-flex">
+            <i class="offer__icon fas fa-graduation-cap"></i>
+            Онлайн-мастер-класс
+          </div>
+          <h1 class="offer__title">
+            Я — профессиональный веб-верстальщик
+          </h1>
+          <p class="offer__time">
+            9 апреля в 18:00
+          </p>
+        </div>
+        <form action="#" class="form">
+          <h3 class="form__title">
+            Забронировать участие
+          </h3>
+          <p class="form__desc">
+            Чтобы стать профессионалом в  HTML и CSS, а также делать WOW
+          </p>
+          <input name="name" type="text" class="form__name input" placeholder="Введите имя">
+          <input name="email" type="email" class="form__email input" placeholder="Введите E-mail">
+          <input name="tel" type="tel" class="form__tel input" placeholder="Введите телефон">
+          <button type="submit" class="form__button button">
+            Оставить заявку
+          </button>
+          <p class="form__security">
+            Ваши данные под защитой
+          </p>
+        </form>
+      </div>
+    </div>
+  </header>
+  <section class="progress-section" id="progress">
+    <div class="container">
+      <div class="exp d-flex">
+        <div class="author">
+          <div class="author__title">
+            Иван Поляруш
+          </div>
+          <div class="author__desc">
+            <p class="author__text">
+              Ведущий мастер-класса
+            </p>
+            <p class="author__text">
+              Веб-верстальщик и фрилансер
+            </p>
+          </div>
+          <div class="author__facts d-flex">
+            <div class="author__item d-flex">
+              <div class="author__number">
+                100+
+              </div>
+              <div class="author__elem author__elem_short">
+                Созданных сайтов
+              </div>
+            </div>
+            <div class="author__item d-flex">
+              <div class="author__number">
+                8
+              </div>
+              <div class="author__elem author__elem_long">
+                Лет опыта
+              </div>
+            </div>
+          </div>
+          <a href="#" class="author__link">
+            Узнать больше
+          </a>
+        </div>
+        <div class="question">
+          <h2 class="question__title title">
+            Знаете ли вы?
+          </h2>
+          <p class="question__desc">
+            По статистике, среднестатистический фрилансер зарабатывает около <b>30 тысяч рублей</b> в месяц. Чаще всего, гораздо меньше этой цифры.
+          </p>
+        </div>
+      </div>
+      <div class="money d-flex">
+        <div class="question">
+          <h2 class="question__title title">
+            Хм...
+          </h2>
+          <p class="question__desc">
+            Почему же так мало? Чего не хватает фрилансерам, чтобы “пробить потолок” хотя бы...
+          </p>
+        </div>
+        <div class="gain d-flex">
+          <p class="gain__head">
+            $1000
+          </p>
+          <p class="gain__desc">
+            в месяц?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="plus-section" id="plus">
+    <div class="container">
+      <h2 class="title">
+        Я покажу,<br>как мне удается...
+      </h2>
+      <ul class="plus d-flex">
+        <li class="plus__item d-flex">
+          <span class="plus__elem">1</span>
+          <div class="plus__desc">
+            <h4 class="plus__caption">
+              Зарабатывать тысячи долларов
+            </h4>
+            <p class="plus__text">
+              Исключительно с помощью веб-верстки и навыков разработки сайтов
+            </p>
+          </div>
+        </li>
+        <li class="plus__item d-flex">
+          <span class="plus__elem">2</span>
+          <div class="plus__desc">
+            <h4 class="plus__caption">
+              Работать<br>в путешествиях
+            </h4>
+            <p class="plus__text">
+              Без возврата домой, используя ноутбук и все возможности фриланса
+            </p>
+          </div>
+        </li>
+        <li class="plus__item d-flex">
+          <span class="plus__elem">3</span>
+          <div class="plus__desc">
+            <h4 class="plus__caption">
+              Быть на шаг впереди конкурентов
+            </h4>
+            <p class="plus__text">
+              Используя проверенные стратегии развития, общения и работы с клиентами
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="title">
+        Если вы
+      </h2>
+      <ul class="about d-flex">
+        <li class="about__item about__item_green d-flex">
+          <i class="fas fa-flag"></i>
+          <h4 class="about__caption">
+            Начинающий<br>веб-верстальщик
+          </h4>
+        </li>
+        <li class="about__item about__item_blue d-flex">
+          <i class="fas fa-money-bill-alt"></i>
+          <h4 class="about__caption">
+            Не довольны доходами на фрилансе
+          </h4>
+        </li>
+        <li class="about__item about__item_red d-flex">
+          <i class="fas fa-meh-rolling-eyes"></i>
+          <h4 class="about__caption">
+            На фрилансе &#62; 2 лет, но ваш доход &#60; $1000
+          </h4>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="reg-section" id="reg">
+    <div class="container d-flex j-content-evenly a-items-center">
+      <div class="reg d-flex">
+        <div class="reg__desc">
+          <i class="reg__icon fas fa-graduation-cap"></i>
+          Онлайн-мастер-класс
+        </div>
+        <h2 class="reg__title">
+          Не потеряйте уникальную возможность. Бронируйте участие уже сегодня!
+        </h2>
+        <div class="reg__desc d-flex">
+          <i class="reg__icon reg__icon_short fas fa-clock"></i>
+          9 апреля в 18:00
+          <i class="reg__icon reg__icon_long fas fa-users"></i>
+          Всего 40 мест
+        </div>
+      </div>
+      <form action="#" class="form">
+        <h3 class="form__title">
+          Забронировать участие
+        </h3>
+        <p class="form__desc">
+          Чтобы стать профессионалом в  HTML и CSS, а также делать WOW
+        </p>
+        <input name="name" type="text" class="form__name input" placeholder="Введите имя">
+        <input name="email" type="email" class="form__email input" placeholder="Введите E-mail">
+        <input name="tel" type="tel" class="form__tel input" placeholder="Введите телефон">
+        <button type="submit" class="form__button button">
+          Оставить заявку
+        </button>
+        <p class="form__security">
+          Ваши данные под защитой
+        </p>
+      </form>
+    </div>
+  </section>
+  <footer class="footer-section" id="footer">
+    <div class="container d-flex j-content-between a-items-center">
+      <a href="#" class="logo d-flex">
+        <i class="logo__icon fas fa-plug"></i>
+        <div class="logo__content">
+          <p class="logo__text logo__text_big">Школа верстки</p>
+          <p class="logo__text logo__text_small">Ивана Поляруша</p>
+        </div>
+      </a>
+      <a href="#" class="policy">
+        Все права защищены
+      </a>
+      <a href="tel:+749556756412" class="telephone">
+        <i class="fas fa-phone"></i>
+        +7 (495) 567-564-12
+      </a>
+    </div>
+  </footer>
+  <!-- JS Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
