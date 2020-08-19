@@ -5,13 +5,13 @@ ini_set('display_errors', 0);
 
 $result = ['success' => false];
 
-if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"]) ) {
+if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"]) && !$_POST["tel"]) {
 
 
     $to = 'ip.ua97@gmail.com';
     $subject = 'Сообщение с сайта';
 
-    $message = "Имя: ".decoder($_POST["name"]).' \r\nE-mail: '.decoder($_POST["email"]).' \r\nСообщение: '.decoder($_POST["message"]);
+    $message = "Имя: ".decoder($_POST["name"])." \r\nE-mail: ".decoder($_POST["email"])." \r\nСообщение: ".decoder($_POST["message"]);
     $headers = array(
         'From' => 'admin@ipoliarush.pp.ua',
         'Reply-To' => 'admin@ipoliarush.pp.ua',
