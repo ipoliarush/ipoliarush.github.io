@@ -912,27 +912,27 @@
 				</p>
 			</div>
 			<div class="contact__content d-flex justify-content-between">
-				<form class="contact__form d-flex flex-column" action="#">
+				<form id="cform" name="cform" class="contact__form d-flex flex-column" action="" method="post">
 					<h4 class="contact__title">
 						Drop us a message
 					</h4>
 					<div class="contact__name field">
 						<label for="cname">Your Name</label>
-						<input type="text" name="name" placeholder="Mike" id="cname">
+						<input required type="text" name="name" placeholder="Mike" id="cname">
 						<i class="far fa-user"></i>
 					</div>
 					<div class="contact__email field">
 						<label for="cemail">Your E-mail</label>
-						<input type="email" name="email" placeholder="E-mail" id="cemail">
+						<input required type="email" name="email" placeholder="E-mail" id="cemail">
 						<i class="far fa-envelope"></i>
 					</div>
 					<div class="contact__message field">
 						<label for="cmessage">Your Message</label>
-						<textarea name="message" cols="30" rows="4" placeholder="Message" id="cmessage"></textarea>
+						<textarea required name="message" cols="30" rows="4" placeholder="Message" id="cmessage"></textarea>
 						<i class="fas fa-pencil-alt"></i>
 					</div>
 					<div class="contact__submit">
-						<button type="submit" class="animate__animated animate__bounceIn wow">
+						<button id="btn" type="submit" class="animate__animated animate__bounceIn wow">
 							Submit
 						</button>
 					</div>
@@ -1015,6 +1015,8 @@
 	<script src="js/smooth-scroll.polyfills.min.js"></script>
 	<script src="js/parallax.min.js"></script>
 	<script src="js/wow.min.js"></script>
+	<script src="js/sweetalert.min.js"></script>
+	<script src="js/ajax.js"></script>
 
 	<script src="js/main.js"></script>
 
