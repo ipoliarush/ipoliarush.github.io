@@ -8,7 +8,7 @@ if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"]) 
     $to = 'ip.ua97@gmail.com';
     $subject = 'Сообщение с сайта';
 
-    $message = "Имя: ".decoder($_POST["name"])." E-mail: ".decoder($_POST["email"]).' Сообщение '.decoder($_POST["message"]);
+    $message = "Имя: ".decoder($_POST["name"]).' \r\nE-mail: '.decoder($_POST["email"]).' \r\nСообщение: '.decoder($_POST["message"]);
     $headers = array(
         'From' => 'admin@ipoliarush.pp.ua',
         'Reply-To' => 'admin@ipoliarush.pp.ua',
@@ -17,7 +17,7 @@ if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"]) 
 
     if (mail($to, $subject, $message, $headers))
       $result = ['success' => true];
-    else 
+    else
       $result = ['success' => false];
 
 
