@@ -1,0 +1,39 @@
+body {
+	font-family: 'Uni Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: #2a292e;
+}
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0 auto;
+}
+
+.container--fluid {
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Mont Heavy', sans-serif;
+	text-transform: uppercase;
+	font-size: 42px;
+	line-height: 1.2em;
+	letter-spacing: 0.05em;
+	color: $violet;
+}
+
+h2 {
+	color: #2a292e;
+	font-family: 'Uni Sans', sans-serif;
+	font-size: 30px;
+	letter-spacing: 0em;
+}
+
+h3 {
+	font-family: 'Uni Sans', sans-serif;
+	font-size: 30px;
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Uni Sans';
+  src: url('../fonts/UniSansSemiBold.eot');
+  src: url('../fonts/UniSansSemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/UniSansSemiBold.woff2') format('woff2'),
+    url('../fonts/UniSansSemiBold.woff') format('woff'),
+    url('../fonts/UniSansSemiBold.ttf') format('truetype'),
+    url('../fonts/UniSansSemiBold.svg#UniSansSemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Uni Sans';
+  src: url('../fonts/UniSansRegular.eot');
+  src: url('../fonts/UniSansRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/UniSansRegular.woff2') format('woff2'),
+    url('../fonts/UniSansRegular.woff') format('woff'),
+    url('../fonts/UniSansRegular.ttf') format('truetype'),
+    url('../fonts/UniSansRegular.svg#UniSansRegular') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mont Heavy';
+  src: url('../fonts/Mont-HeavyDEMO.eot');
+  src: url('../fonts/Mont-HeavyDEMO.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Mont-HeavyDEMO.woff2') format('woff2'),
+    url('../fonts/Mont-HeavyDEMO.woff') format('woff'),
+    url('../fonts/Mont-HeavyDEMO.ttf') format('truetype'),
+    url('../fonts/Mont-HeavyDEMO.svg#Mont-HeavyDEMO') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

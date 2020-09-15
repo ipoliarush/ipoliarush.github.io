@@ -1,0 +1,163 @@
+/* ----- Media Queries ----- */
+
+/* 992-1200px */
+@media screen and (max-width: 1200px) {}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+  .perspectives {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 60%;
+    }
+  }
+
+  .function {
+    &__item {
+      flex-basis: 43%;
+    }
+  }
+
+  .support {
+    &__wrapper {
+      width: 100%;
+      padding: 70px 30px;
+    }
+
+    &__list {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    &__payment {
+      flex-wrap: wrap;
+    }
+
+    &__purse {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* 576-768px */
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .header {
+    .head {
+      max-width: 100%;
+
+      &__button {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .perspectives {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 70%;
+    }
+  }
+
+  .function {
+    &__item {
+      flex-basis: 60%;
+    }
+  }
+
+  .support {
+
+
+    &__item {
+      justify-content: center;
+      width: 100%;
+      display: flex;
+
+      &:nth-child(2n) {
+        width: 100%;
+      }
+    }
+
+    &__warning {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}
+
+/* 320-576px */
+@media screen and (max-width: 576px) {
+
+  .header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .head {
+      &__button {
+        font-size: 25px;
+      }
+
+      &__item {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .perspectives {
+
+    &__item {
+      flex-basis: 100%;
+    }
+  }
+
+  .function {
+    &__item {
+      flex-basis: 100%;
+    }
+  }
+
+  .support {
+    &__wrapper {
+      padding: 70px 10px;
+    }
+
+    &__title {
+      word-wrap: break-word;
+    }
+  }
+
+  .offer {
+    &__button {
+      padding: 10px 40px;
+    }
+  }
+
+  .footer {
+    &__license {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link {
+      margin: 0 auto 10px auto;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
