@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const forms = document.querySelector('.form');
 
-  const sendAjaxForm = (data) => {
+  const sendForm = (data) => {
 
     const formText = document.querySelector('.form__text');
     const popup = document.querySelector('.popup');
@@ -15,21 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
       body: data
     })
       .then(succes => {
-        formText.classList.add('form__text--success');
-        formText.innerHTML('Сообщение отправлено!');
-        setTimeout(function () {
-          popup.classList.remove('popup--active');
-        }, 3000)
-        setTimeout(function () {
-          formText.innerHTML('');
-        }, 6000)
+        1
+        // formText.classList.add('form__text--success');
+        // formText.innerHTML('Сообщение отправлено!');
+        // setTimeout(function () {
+        //   popup.classList.remove('popup--active');
+        // }, 3000)
+        // setTimeout(function () {
+        //   formText.innerHTML('');
+        // }, 6000)
       })
       .catch(error => {
-        formText.classList.add('form__text--error');
-        formText.innerHTML('Сообщение не отправлено!');
-        setTimeout(function () {
-          formText.innerHTML('');
-        }, 3000)
+        2
+        // formText.classList.add('form__text--error');
+        // formText.innerHTML('Сообщение не отправлено!');
+        // setTimeout(function () {
+        //   formText.innerHTML('');
+        // }, 3000)
       });
   }
 
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     forms[i].addEventListener('submit', function (e) {
       e.preventDefault();
       const data = new FormData(data);
-      sendAjaxForm(data);
+      sendForm(data);
       this.reset();
     });
   };
