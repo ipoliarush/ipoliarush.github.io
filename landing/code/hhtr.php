@@ -1,19 +1,9 @@
 <?php
 
-$result = ['success' => false];
-
-    function console_log( $data ){
-        echo '<script>';
-        echo 'console.log('. json_encode( $data ) .')';
-        echo '</script>';
-    }
-
-    
-
+error_reporting(0);
+ini_set('display_errors', 0);
 
 if (isset($_POST["name"]) && isset($_POST["email"])) {
-    
-   
 
   //Заменить Email
   $to = 'ip.ua97@gmail.com';
@@ -27,20 +17,10 @@ if (isset($_POST["name"]) && isset($_POST["email"])) {
     'X-Mailer' => 'PHP/' . phpversion()
   );
 
-  if (mail($to, $subject, $message, $headers))
-    $result = ['success' => true];
-  else
-    $result = ['success' => false];
-
-
-  header('Content-Type: application/json');
-  echo json_encode($result);
-  
+  mail($to, $subject, $message, $headers);
 }
 
 function decoder($mess)
 {
   return urldecode(urldecode(htmlspecialchars($mess)));
 }
-
-?>
