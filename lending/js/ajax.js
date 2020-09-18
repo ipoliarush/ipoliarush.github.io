@@ -14,27 +14,34 @@ function sendAjaxForm(e, t) {
           $('.popup').removeClass('popup--active');
         }, 3000)
         setTimeout(function () {
-            $('.form__text').removeClass('form__text--success');
+          $('.form__text').removeClass('form__text--success');
           $('.form__text').html('');
         }, 6000)
       }
 
     },
     error: function (e) {
-    $('.form__text').removeClass('form__text--success');
+      $('.form__text').removeClass('form__text--success');
       $('.form__text').addClass('form__text--error');
       $('.form__text').html('Сообщение не отправлено!');
       setTimeout(function () {
-          $('.form__text').removeClass('form__text--error');
+        $('.form__text').removeClass('form__text--error');
         $('.form__text').html('');
       }, 3000)
     },
   });
 
 }
+
+
 $(document).ready(function () {
-  let e, n;
   $("#btn").click(function () {
-    if (((n = $("#fname").val().length), (e = $("#femail").val().length), 0 != e && 0 != n)) return sendAjaxForm("form", "js/hhtr.php"), !1;
+    if ($("#fname").val().length != 0 && $("#femail").val().length != 0 && validateEmail($("#femail").val()))
+      return sendAjaxForm("form", "js/hhtr.php"), !1;
   });
 });
+
+function validateEmail(email) {
+  var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  return re.test(String(email).toLowerCase());
+}

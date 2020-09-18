@@ -620,6 +620,11 @@ h3 {
           transform: translate(-50%, 0);
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
+  width: 100%;
+}
+
+.popup .form__text {
+  text-align: center;
 }
 
 .popup .form__text--success {
