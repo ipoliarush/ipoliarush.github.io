@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const forms = document.querySelector('.form');
 
-  function sendAjaxForm(data) {
+  const sendAjaxForm = (data) => {
 
     const formText = document.querySelector('.form__text');
     const popup = document.querySelector('.popup');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: JSON.stringify(data)
+      body: data
     })
       .then(succes => {
         formText.classList.add('form__text--success');
@@ -36,12 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < forms.length; i++) {
     forms[i].addEventListener('submit', function (e) {
       e.preventDefault();
-
-      let data = new FormData(this);
-      data = Object.fromEntries(data);
-
-      ajaxSend(data);
+      const data = new FormData(data);
+      sendAjaxForm(data);
       this.reset();
     });
-  }
+  };
 });
