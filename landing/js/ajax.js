@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       body: data
     })
-      .then(succes => {
-        if (succes.ok) {
+      .then(success => {
+        if (success.ok) {
           formText.classList.add('form__text--success');
           formText.innerHTML = 'Сообщение отправлено!';
           setTimeout(function () {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formText.innerHTML = '';
           }, 3000)
         }
-        return succes.json()
+        return success.json()
       })
       .then(function (json) {
         console.log(json)
