@@ -5,6 +5,7 @@
 
   close.onclick = function () {
     popup.classList.remove('popup--active')
+    document.body.style.overflow = ''
   }
 
 
@@ -16,8 +17,9 @@
 
   document.addEventListener('click', function (event) {
     if (event.target.dataset.type == 'popup') {
-      event.preventDefault();
-      popup.classList.add('popup--active');
+      event.preventDefault()
+      popup.classList.add('popup--active')
+      document.body.style.overflow = 'hidden'
     }
   })
 

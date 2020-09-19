@@ -1,35 +1,38 @@
 <?php
 
+//Включен лог ошибок
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
+
+//Отключен лог ошибок из-за конфликта для получения ответа в формате json
 error_reporting(0);
 ini_set('display_errors', 0);
 
-$result = ['success' => false];
+$data = ['success' => 'ok'];
 
-if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"]) && !$_POST["tel"]) {
+if (isset($_POST["name"]) && isset($_POST["email"])) {
 
+  $to = 'ip.ua97@gmail.com';
+  $subject = 'Сообщение с сайта';
+  $message = "Имя: " . decoder($_POST["name"]) . " \r\nE-mail: " . decoder($_POST["email"]);
+  $headers = array(
+    'From' => 'admin',
+    'Reply-To' => 'admin',
+    'X-Mailer' => 'PHP/' . phpversion()
+  );
 
-    $to = 'ip.ua97@gmail.com';
-    $subject = 'Сообщение с сайта';
+  mail($to, $subject, $message, $headers);
 
-    $message = "Имя: ".decoder($_POST["name"])." \r\nE-mail: ".decoder($_POST["email"])." \r\nСообщение: ".decoder($_POST["message"]);
-    $headers = array(
-        'From' => 'admin@ipoliarush.pp.ua',
-        'Reply-To' => 'admin@ipoliarush.pp.ua',
-        'X-Mailer' => 'PHP/' . phpversion()
-    );
-
-    if (mail($to, $subject, $message, $headers))
-      $result = ['success' => true];
-    else
-      $result = ['success' => false];
-
-
-    header('Content-Type: application/json');
-    echo json_encode($result);
+  // if (mail($to, $subject, $message, $headers)) {
+  //   //Отправка данных на сторону клиента
+  //   header('Content-Type: application/json');
+  //   echo json_encode($data);
+  // }
 }
 
-function decoder($mess) {
+
+//Чтобы защитить сервер от злоумышлинников
+function decoder($mess)
+{
   return urldecode(urldecode(htmlspecialchars($mess)));
 }
-
-?>
