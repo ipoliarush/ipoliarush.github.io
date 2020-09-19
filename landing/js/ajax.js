@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       body: data
     })
       .then(success => {
+        //Проверка успешного отправления данных
         if (success.ok) {
           formText.classList.add('form__text--success');
           formText.innerHTML = 'Сообщение отправлено!';
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             formText.classList.remove('form__text--success');
             formText.innerHTML = '';
           }, 6000)
+
+          //Получение данных из файла php
+          return success.json()
         }
         else {
           formText.classList.add('form__text--error');
@@ -34,15 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
             formText.innerHTML = '';
           }, 3000)
         }
-        return success.json()
       })
       .then(function (json) {
+        //Обработка полученых данных
         console.log(json)
       })
   }
+
+  //Упаковка данных из полей для отправки на сервер
   forms.addEventListener('submit', function (e) {
     e.preventDefault();
-
     let data = '';
 
     for (input of forms.querySelectorAll('input')) {
