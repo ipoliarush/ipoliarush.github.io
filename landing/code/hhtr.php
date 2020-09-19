@@ -4,6 +4,8 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+$data = ['success' => 'ok'];
+
 if (isset($_POST["name"]) && isset($_POST["email"])) {
 
   $to = 'ip.ua97@gmail.com';
@@ -15,11 +17,14 @@ if (isset($_POST["name"]) && isset($_POST["email"])) {
     'X-Mailer' => 'PHP/' . phpversion()
   );
 
-  mail($to, $subject, $message, $headers);
+  if (mail($to, $subject, $message, $headers)) {
+    header('Content-Type: application/json');
+    echo json_encode($data);
+  }
 }
 
 
-//Чтобы защитить сервер от злоумышлиников
+//Чтобы защитить сервер от злоумышлинников
 function decoder($mess)
 {
   return urldecode(urldecode(htmlspecialchars($mess)));

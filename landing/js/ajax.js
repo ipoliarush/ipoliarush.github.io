@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
             formText.innerHTML = '';
           }, 3000)
         }
+        return succes.json()
+      })
+      .then(function (json) {
+        console.log(json)
       })
   }
   forms.addEventListener('submit', function (e) {
