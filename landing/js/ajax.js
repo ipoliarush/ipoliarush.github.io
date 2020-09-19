@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 6000)
 
           //Получение данных из файла php
-          return success.json()
+          return success.json().then(function (json) {
+            //Обработка полученых данных
+            console.log(json)
+          })
         }
         else {
           formText.classList.add('form__text--error');
@@ -38,10 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             formText.innerHTML = '';
           }, 3000)
         }
-      })
-      .then(function (json) {
-        //Обработка полученых данных
-        console.log(json)
       })
   }
 
