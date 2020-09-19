@@ -18,6 +18,8 @@ if (isset($_POST["name"]) && isset($_POST["email"])) {
   );
 
   if (mail($to, $subject, $message, $headers)) {
+
+    //Отправка данных на сторону клиента
     header('Content-Type: application/json');
     echo json_encode($data);
   }
