@@ -191,13 +191,22 @@ h1 {
 }
 
 h2 {
+  font-family: 'Mont Heavy', sans-serif;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  color: #554494;
+}
+
+h3 {
   color: #2a292e;
   font-family: 'Uni Sans', sans-serif;
   font-size: 30px;
   letter-spacing: 0em;
 }
 
-h3 {
+h4 {
   font-family: 'Uni Sans', sans-serif;
   font-size: 30px;
 }
