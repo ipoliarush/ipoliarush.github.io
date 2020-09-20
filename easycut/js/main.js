@@ -15,9 +15,9 @@
   })
 
 
-  document.addEventListener('click', function (event) {
-    if (event.target.dataset.type == 'popup') {
-      event.preventDefault()
+  document.addEventListener('click', function (e) {
+    if (e.target.dataset.type == 'popup') {
+      e.preventDefault()
       popup.classList.add('popup--active')
       document.body.style.overflow = 'hidden'
     }

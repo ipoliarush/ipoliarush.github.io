@@ -1,0 +1,33 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: $white;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+h1 {
+	@extend %title-fonts;
+	font-size: 80px;
+	letter-spacing: 0.02em;
+	line-height: 1.2em;
+}
+
+h2 {
+	@extend %title-fonts;
+	font-size: 36px;
+	color: $yellow;
+}
+
+h3 {
+	@extend %title-fonts;
+	font-size: 24px;
+	letter-spacing: 0.1em;
+}

@@ -1,0 +1,28 @@
+.slider {
+
+  &__viewport {
+    position: relative;
+  }
+
+  &__item {
+    width: 400px;
+    height: 480px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  &__img {
+    min-width: 400px;
+    min-height: 480px;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+  }
+
+  &__next {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: rotateY(-50%);
+    cursor: pointer;
+  }
+}

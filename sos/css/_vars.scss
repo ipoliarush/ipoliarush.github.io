@@ -1,0 +1,43 @@
+$black: #010101;
+$white: #FFFFFF;
+$yellow: #FFB548;
+
+%title-fonts {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+%button {
+  background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+  border-radius: 4px;
+  width: 260px;
+  display: block;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  transition: all ease .8s;
+
+  &:hover {
+    box-shadow: 0 0 20px $yellow;
+  }
+}
+
+%section {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes move {
+  from {
+    transform: translate(-50%, 0);
+  }
+
+  to {
+    transform: translate(-50%, 10px);
+  }
+}
